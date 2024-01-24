@@ -29,7 +29,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 
 
-API_KEY = "6202839270:AAE3bvVPSIVsfUzSgCRO-HRhJwSb7vgsPsU"
+API_KEY = ""
 
 def detect_language(text):
     try:
@@ -281,8 +281,6 @@ def comments(update: Update, context):
     name = user.first_name+" "+user.last_name
 
     print(comments_text)
-    # Store the comments or process them as needed
-    # For this example, we'll just send a message acknowledging the feedback
     update.message.reply_text("Thank you for your feedback!")
     with open("data.csv",mode='a',newline='') as file:
         writer =csv.writer(file)
@@ -323,7 +321,6 @@ updater.dispatcher.add_handler(CommandHandler("quiz", start_quiz))
 updater.dispatcher.add_handler(CommandHandler("begin", next_question))
 updater.dispatcher.add_handler(CommandHandler("rank", rank))
 updater.dispatcher.add_handler(CommandHandler("ans", check_answer))
-# updater.dispatcher.add_handler(CommandHandler("hacker", text_g))
 updater.dispatcher.add_handler(CommandHandler("review",get_feedback))
 updater.dispatcher.add_handler(ConversationHandler(
             entry_points=[CommandHandler('feedback', feedback)],
