@@ -35,7 +35,7 @@ sem6text='''<b>Semester 6 Lab Manual</b>
 2) 22617 - Mobile Application Development : <a href='https://drive.google.com/file/d/1Nv24p2U9xAUP-s2A0glH6w6IMei1ZvvP/view'>Download</a>'''
 
 
-CHAT_BOT_API_KEY = "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"
+CHAT_BOT_API_KEY = "API_KEY"
 
 from googlesearch import search
 import openai
