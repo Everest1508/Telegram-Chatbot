@@ -14,7 +14,7 @@ def translate_marathi_to_english(text):
     return translation
 
 # Example usage
-marathi_text = "तुम्ही कसे आहात?"  # Marathi text, language will be auto-detected
+marathi_text = "तुम्ही कसे आहात?"
 english_translation = translate_marathi_to_english(marathi_text)
 print(f"Marathi: {marathi_text}")
 print(f"English: {english_translation}")
